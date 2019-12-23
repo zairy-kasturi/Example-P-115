@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+	double distance[6][5] = { {0}, {258},{43,301},{475,217,518},{876,616,918,401},{623,365,667,148,246} };
+	double choice1, choice2;
+
+	cout << "		Menu					\n";
+	cout << "Town				Number\n";
+	cout << "Alor setar			0\n";
+	cout << "Ipoh				1\n";
+	cout << "Kangar				2\n";
+	cout << "Kuala Lumpur			3\n";
+	cout << "Mersing				4\n";
+	cout << "Melaka				5\n";
+
+
+	cout << "\nThe loop will stop loop when user press <ctrl> + z ";
+	cout << "\nMake sure your choice from the biggest Number to smallest numbers : ";
+	
+
+	
+	while (cin >> choice1 >> choice2)
+	{
+
+		for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 5; j++) {
+				if (i == choice1 && j == choice2)
+					cout << "The distance is : " << distance[i][j] << endl;;
+			}
+		}
+
+		cout << "\nMake sure your choice from the biggest Number to smallest numbers : ";
+
+	}
+
+	return 0;
+}
+
