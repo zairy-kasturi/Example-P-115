@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstring>
+#define n 5
+using namespace std;
+
+void main()
+{
+	int number[n];
+
+	cout << "Enter 5 scores : ";
+	for (int i = 0; i < n; i++)
+	{
+		cin >> number[i];
+		cout << number[i] << " ";
+	}
+
+	double largest = number[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (number[i] > largest)
+		{
+			largest = number[i];
+		}
+	}
+	cout << "\nThe highest scores is " << largest;
+
+	int scores=0;
+	cout << "\nThe scores and their differents from the highest are :";
+	for (int i = 0; i < 5; i++) 
+	{
+		scores = largest - number[i];
+		cout <<"\n"<< number[i] << " off by " << scores;
+	}
+}
+
